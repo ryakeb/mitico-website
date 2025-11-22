@@ -92,6 +92,58 @@ if (photoSlides.length) {
   updatePhotoCarousel();
 }
 
+// Collabs ribbon carousel
+const collabTrack = document.getElementById("collabsTrack");
+const collabPrev = document.querySelector(".collab-prev");
+const collabNext = document.querySelector(".collab-next");
+let collabTimer;
+
+const getCollabStep = () => {
+  if (!collabTrack) return 220;
+  const logo = collabTrack.querySelector(".collab-logo");
+  return logo ? logo.getBoundingClientRect().width + 14 : 220;
+};
+
+const updateCollabButtons = () => {
+  if (!collabTrack || !collabPrev || !collabNext) return;
+  const maxScrollLeft = collabTrack.scrollWidth - collabTrack.clientWidth;
+  collabPrev.disabled = collabTrack.scrollLeft <= 0;
+  collabNext.disabled = collabTrack.scrollLeft >= maxScrollLeft - 5;
+};
+
+collabPrev?.addEventListener("click", () => {
+  collabTrack?.scrollBy({ left: -getCollabStep(), behavior: "smooth" });
+});
+
+collabNext?.addEventListener("click", () => {
+  collabTrack?.scrollBy({ left: getCollabStep(), behavior: "smooth" });
+});
+
+collabTrack?.addEventListener("scroll", () => {
+  window.requestAnimationFrame(updateCollabButtons);
+});
+
+const startCollabAuto = () => {
+  if (!collabTrack) return;
+  clearInterval(collabTimer);
+  collabTimer = window.setInterval(() => {
+    const maxScrollLeft = collabTrack.scrollWidth - collabTrack.clientWidth;
+    const step = getCollabStep() * 0.75;
+    if (collabTrack.scrollLeft >= maxScrollLeft - 5) {
+      collabTrack.scrollTo({ left: 0, behavior: "smooth" });
+      return;
+    }
+    collabTrack.scrollBy({ left: step, behavior: "smooth" });
+  }, 2600);
+};
+
+const stopCollabAuto = () => {
+  clearInterval(collabTimer);
+};
+
+collabTrack?.addEventListener("mouseenter", stopCollabAuto);
+collabTrack?.addEventListener("mouseleave", startCollabAuto);
+
 // Option, on force une catégorie par défaut au chargement
 window.addEventListener("DOMContentLoaded", () => {
   const defaultTag = document.querySelector('.menu-tag[data-category="classiques"]');
@@ -99,4 +151,6 @@ window.addEventListener("DOMContentLoaded", () => {
     filterCards(defaultTag.dataset.category);
   }
   updateButtons();
+  updateCollabButtons();
+  startCollabAuto();
 });
