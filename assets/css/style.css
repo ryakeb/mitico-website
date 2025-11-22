@@ -201,7 +201,7 @@ a {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: url("/assets/img/hero-mitico.webp") center/cover no-repeat;
+  background: url("assets/img/hero-mitico.webp") center/cover no-repeat;
 }
 
 .hero-gradient {
