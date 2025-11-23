@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mitico - Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="assets/img/mitico-logo-bg.png" alt="Mitico Gelato">
+        <span class="logo-note">Mitico</span>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav">
+        <a href="index.html#hero">Home</a>
+        <a href="index.html#histoire">Story</a>
+        <a href="menu.html">Menu</a>
+        <a href="index.html#photos">Photos</a>
+        <a href="index.html#collabs">Collabs</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section menu-landing">
+      <div class="container">
+        <p class="eyebrow">The menu</p>
+        <h1>A gelateria-style menu to flip through</h1>
+        <p class="section-intro">Browse the selection: timeless classics, Mitico signatures, fruit-packed sorbets, and iced drinks.</p>
+      </div>
+    </section>
+
+    <section id="menu" class="section menu-section">
+      <div class="container">
+        <div class="menu-panel">
+          <div class="menu-tags">
+            <button class="menu-tag active" data-category="classiques">Classic flavors</button>
+            <button class="menu-tag" data-category="signatures">Signature flavors</button>
+            <button class="menu-tag" data-category="sorbets">Sorbets</button>
+            <button class="menu-tag" data-category="boissons">Drinks</button>
+          </div>
+
+          <div class="menu-carousel-wrapper">
+            <button class="carousel-btn prev" aria-label="Previous">&#10094;</button>
+            <div class="menu-carousel" id="menuCarousel">
+              <!-- Classic cards -->
+              <article class="menu-card" data-category="classiques">
+                <div class="card-top">
+                  <p class="eyebrow">Classic</p>
+                  <span class="price">€3.80</span>
+                </div>
+                <h3>Madagascar Vanilla</h3>
+                <p>Fresh dairy cream, whole vanilla beans infused for hours.</p>
+                <span class="tag">House signature</span>
+              </article>
+              <article class="menu-card" data-category="classiques">
+                <div class="card-top">
+                  <p class="eyebrow">Classic</p>
+                  <span class="price">€3.90</span>
+                </div>
+                <h3>Pistachio</h3>
+                <p>Roasted pistachios, silky texture, intense flavor.</p>
+                <span class="tag">House pistachio paste</span>
+              </article>
+              <article class="menu-card" data-category="classiques">
+                <div class="card-top">
+                  <p class="eyebrow">Classic</p>
+                  <span class="price">€3.70</span>
+                </div>
+                <h3>Stracciatella</h3>
+                <p>Light cream, crunchy chocolate shards.</p>
+                <span class="tag">Belgian chocolate</span>
+              </article>
+
+              <!-- Signature cards -->
+              <article class="menu-card" data-category="signatures">
+                <div class="card-top">
+                  <p class="eyebrow">Signature</p>
+                  <span class="price">€4.20</span>
+                </div>
+                <h3>Matcha e Limone</h3>
+                <p>Matcha gelato with a lemon twist, for green tea lovers.</p>
+                <span class="tag">Fresh & vegetal</span>
+              </article>
+              <article class="menu-card" data-category="signatures">
+                <div class="card-top">
+                  <p class="eyebrow">Signature</p>
+                  <span class="price">€4.30</span>
+                </div>
+                <h3>Mitico Salted Caramel</h3>
+                <p>House caramel, pinch of fleur de sel, molten texture.</p>
+                <span class="tag">Must-try</span>
+              </article>
+              <article class="menu-card" data-category="signatures">
+                <div class="card-top">
+                  <p class="eyebrow">Signature</p>
+                  <span class="price">€4.10</span>
+                </div>
+                <h3>Tiramisu Ghiacciato</h3>
+                <p>Mascarpone, cocoa, coffee-soaked biscuit, hint of marsala.</p>
+                <span class="tag">Frozen dessert</span>
+              </article>
+
+              <!-- Sorbet cards -->
+              <article class="menu-card" data-category="sorbets">
+                <div class="card-top">
+                  <p class="eyebrow">Sorbet</p>
+                  <span class="price">€3.60</span>
+                </div>
+                <h3>Seasonal Strawberry</h3>
+                <p>Fruit-packed, dairy-free, light and refreshing.</p>
+                <span class="tag">Vegan</span>
+              </article>
+              <article class="menu-card" data-category="sorbets">
+                <div class="card-top">
+                  <p class="eyebrow">Sorbet</p>
+                  <span class="price">€3.60</span>
+                </div>
+                <h3>Sicilian Lemon</h3>
+                <p>Tangy and bright, perfect after a meal.</p>
+                <span class="tag">Citrus</span>
+              </article>
+              <article class="menu-card" data-category="sorbets">
+                <div class="card-top">
+                  <p class="eyebrow">Sorbet</p>
+                  <span class="price">€3.70</span>
+                </div>
+                <h3>Alfonso Mango</h3>
+                <p>Tree-ripened Alfonso mangoes, velvety texture, sunny finish.</p>
+                <span class="tag">Dairy-free</span>
+              </article>
+
+              <!-- Drinks cards -->
+              <article class="menu-card" data-category="boissons">
+                <div class="card-top">
+                  <p class="eyebrow">Drink</p>
+                  <span class="price">€4.80</span>
+                </div>
+                <h3>Affogato al caffè</h3>
+                <p>A scoop of vanilla gelato topped with a hot espresso.</p>
+                <span class="tag">Italian classic</span>
+              </article>
+              <article class="menu-card" data-category="boissons">
+                <div class="card-top">
+                  <p class="eyebrow">Drink</p>
+                  <span class="price">€3.00</span>
+                </div>
+                <h3>Italian coffee</h3>
+                <p>Espresso, cappuccino, macchiato, like at home.</p>
+                <span class="tag">Local roasting</span>
+              </article>
+              <article class="menu-card" data-category="boissons">
+                <div class="card-top">
+                  <p class="eyebrow">Drink</p>
+                  <span class="price">€5.20</span>
+                </div>
+                <h3>Sicilian granita</h3>
+                <p>Coffee, lemon or mandarin, shaved ice made to order.</p>
+                <span class="tag">Sip slowly</span>
+              </article>
+            </div>
+            <button class="carousel-btn next" aria-label="Next">&#10095;</button>
+          </div>
+
+          <p class="menu-note">The menu evolves with the seasons and arrivals. Visit us or follow our social channels to discover the flavors of the moment.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Mitico Gelato, all rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

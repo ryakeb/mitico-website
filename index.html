@@ -28,7 +28,7 @@
       <nav class="main-nav">
         <a href="#hero">Home</a>
         <a href="#histoire">Story</a>
-        <a href="#menu">Menu</a>
+        <a href="menu.html">Menu</a>
         <a href="#photos">Photos</a>
         <a href="#collabs">Collabs</a>
         <a href="#contact">Contact</a>
@@ -44,20 +44,7 @@
     <div class="hero-deco hero-deco-right"></div>
 
     <div class="container hero-grid">
-      <div class="hero-copy">
-        <div class="pill">100% artisanal gelato</div>
-        <h1>Indulge in the magical flavors of Mitico Gelato</h1>
-        <p class="hero-lead">Share the enchanting tale of Gelato Mitico, where the best of Belgium meets the essence of Italy. Unveil how this frozen delight has stolen the hearts and taste buds of many!</p>
-        <div class="hero-cta">
-          <a href="#menu" class="btn-primary">View the menu</a>
-          <a href="#histoire" class="btn-ghost">Our story</a>
-        </div>
-        <div class="hero-badges">
-          <span>Churned fresh daily</span>
-          <span>Vegan & lactose-free options</span>
-          <span>Italian espresso</span>
-        </div>
-      </div>
+      <div class="hero-visual" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -73,150 +60,6 @@
       </div>
       <div class="histoire-image">
         <img src="assets/img/about-us.webp" alt="Mitico Gelato counter in Belgium">
-      </div>
-    </div>
-  </section>
-
-  <!-- MENU AVEC "CARTE" + CAROUSEL -->
-  <section id="menu" class="section menu-section">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">The menu</p>
-        <h2>A gelateria-style menu to flip through</h2>
-        <p class="section-intro">Browse the selection: timeless classics, Mitico signatures, fruit-packed sorbets, and iced drinks.</p>
-      </div>
-
-      <div class="menu-panel">
-        <div class="menu-tags">
-          <button class="menu-tag active" data-category="classiques">Classic flavors</button>
-          <button class="menu-tag" data-category="signatures">Signature flavors</button>
-          <button class="menu-tag" data-category="sorbets">Sorbets</button>
-          <button class="menu-tag" data-category="boissons">Drinks</button>
-        </div>
-
-        <div class="menu-carousel-wrapper">
-          <button class="carousel-btn prev" aria-label="Previous">&#10094;</button>
-          <div class="menu-carousel" id="menuCarousel">
-            <!-- Classic cards -->
-            <article class="menu-card" data-category="classiques">
-              <div class="card-top">
-                <p class="eyebrow">Classic</p>
-                <span class="price">€3.80</span>
-              </div>
-              <h3>Madagascar Vanilla</h3>
-              <p>Fresh dairy cream, whole vanilla beans infused for hours.</p>
-              <span class="tag">House signature</span>
-            </article>
-            <article class="menu-card" data-category="classiques">
-              <div class="card-top">
-                <p class="eyebrow">Classic</p>
-                <span class="price">€3.90</span>
-              </div>
-              <h3>Pistachio</h3>
-              <p>Roasted pistachios, silky texture, intense flavor.</p>
-              <span class="tag">House pistachio paste</span>
-            </article>
-            <article class="menu-card" data-category="classiques">
-              <div class="card-top">
-                <p class="eyebrow">Classic</p>
-                <span class="price">€3.70</span>
-              </div>
-              <h3>Stracciatella</h3>
-              <p>Light cream, crunchy chocolate shards.</p>
-              <span class="tag">Belgian chocolate</span>
-            </article>
-
-            <!-- Signature cards -->
-            <article class="menu-card" data-category="signatures">
-              <div class="card-top">
-                <p class="eyebrow">Signature</p>
-                <span class="price">€4.20</span>
-              </div>
-              <h3>Matcha e Limone</h3>
-              <p>Matcha gelato with a lemon twist, for green tea lovers.</p>
-              <span class="tag">Fresh & vegetal</span>
-            </article>
-            <article class="menu-card" data-category="signatures">
-              <div class="card-top">
-                <p class="eyebrow">Signature</p>
-                <span class="price">€4.30</span>
-              </div>
-              <h3>Mitico Salted Caramel</h3>
-              <p>House caramel, pinch of fleur de sel, molten texture.</p>
-              <span class="tag">Must-try</span>
-            </article>
-            <article class="menu-card" data-category="signatures">
-              <div class="card-top">
-                <p class="eyebrow">Signature</p>
-                <span class="price">€4.10</span>
-              </div>
-              <h3>Tiramisu Ghiacciato</h3>
-              <p>Mascarpone, cocoa, coffee-soaked biscuit, hint of marsala.</p>
-              <span class="tag">Frozen dessert</span>
-            </article>
-
-            <!-- Sorbet cards -->
-            <article class="menu-card" data-category="sorbets">
-              <div class="card-top">
-                <p class="eyebrow">Sorbet</p>
-                <span class="price">€3.60</span>
-              </div>
-              <h3>Seasonal Strawberry</h3>
-              <p>Fruit-packed, dairy-free, light and refreshing.</p>
-              <span class="tag">Vegan</span>
-            </article>
-            <article class="menu-card" data-category="sorbets">
-              <div class="card-top">
-                <p class="eyebrow">Sorbet</p>
-                <span class="price">€3.60</span>
-              </div>
-              <h3>Sicilian Lemon</h3>
-              <p>Tangy and bright, perfect after a meal.</p>
-              <span class="tag">Citrus</span>
-            </article>
-            <article class="menu-card" data-category="sorbets">
-              <div class="card-top">
-                <p class="eyebrow">Sorbet</p>
-                <span class="price">€3.70</span>
-              </div>
-              <h3>Alfonso Mango</h3>
-              <p>Tree-ripened Alfonso mangoes, velvety texture, sunny finish.</p>
-              <span class="tag">Dairy-free</span>
-            </article>
-
-            <!-- Drinks cards -->
-            <article class="menu-card" data-category="boissons">
-              <div class="card-top">
-                <p class="eyebrow">Drink</p>
-                <span class="price">€4.80</span>
-              </div>
-              <h3>Affogato al caffè</h3>
-              <p>A scoop of vanilla gelato topped with a hot espresso.</p>
-              <span class="tag">Italian classic</span>
-            </article>
-            <article class="menu-card" data-category="boissons">
-              <div class="card-top">
-                <p class="eyebrow">Drink</p>
-                <span class="price">€3.00</span>
-              </div>
-              <h3>Italian coffee</h3>
-              <p>Espresso, cappuccino, macchiato, like at home.</p>
-              <span class="tag">Local roasting</span>
-            </article>
-            <article class="menu-card" data-category="boissons">
-              <div class="card-top">
-                <p class="eyebrow">Drink</p>
-                <span class="price">€5.20</span>
-              </div>
-              <h3>Sicilian granita</h3>
-              <p>Coffee, lemon or mandarin, shaved ice made to order.</p>
-              <span class="tag">Sip slowly</span>
-            </article>
-          </div>
-          <button class="carousel-btn next" aria-label="Next">&#10095;</button>
-        </div>
-
-        <p class="menu-note">The menu evolves with the seasons and arrivals. Visit us or follow our social channels to discover the flavors of the moment.</p>
       </div>
     </div>
   </section>
@@ -265,15 +108,6 @@
   <!-- COLLABS -->
   <section id="collabs" class="section collabs-section">
     <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Collabs</p>
-        <h2>At Mitico Gelato, we believe in the power of collaboration</h2>
-        <p class="collabs-text">We are excited about the possibility of working together to bring our exceptional gelato to an even wider audience. Whether you're interested in featuring our products at your events, in your restaurant, or as part of a unique marketing campaign, we are eager to explore how we can create something truly special together.</p>
-      </div>
-      <div class="collabs-text">
-        <p>If you're interested in a collaboration, please let us know. We would love to discuss potential opportunities and how we can tailor our offerings to meet your needs.</p>
-        <p>Thank you for considering a partnership with Mitico Gelato. We look forward to the possibility of working with you.</p>
-      </div>
       <div class="collabs-marquee">
         <button class="carousel-btn collab-prev" aria-label="Previous collaborations">&#10094;</button>
         <div class="collabs-window">
