@@ -154,3 +154,20 @@ window.addEventListener("DOMContentLoaded", () => {
   updateCollabButtons();
   startCollabAuto();
 });
+
+// Back to top
+const backToTop = document.querySelector(".back-to-top");
+
+if (backToTop) {
+  const toggleBackToTop = () => {
+    const shouldShow = window.scrollY > 400;
+    backToTop.classList.toggle("is-visible", shouldShow);
+  };
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", toggleBackToTop, { passive: true });
+  toggleBackToTop();
+}
