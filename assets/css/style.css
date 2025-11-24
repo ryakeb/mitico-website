@@ -759,8 +759,8 @@ a {
 
 .collabs-track {
   display: flex;
-  gap: 14px;
-  padding: 16px 18px;
+  gap: 10px;
+  padding: 14px 14px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
@@ -771,7 +771,7 @@ a {
 }
 
 .collab-logo {
-  flex: 0 0 210px;
+  flex: 0 0 170px;
   border-radius: 14px;
   overflow: hidden;
   aspect-ratio: 3 / 2;
@@ -835,6 +835,20 @@ a {
 
   .collabs-text {
     text-align: left;
+  }
+
+  .collab-logo {
+    flex-basis: 150px;
+  }
+
+  .collabs-track {
+    padding: 12px 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .collab-logo {
+    flex-basis: 130px;
   }
 }
 
